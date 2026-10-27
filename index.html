@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alirio Guzman | Software & Web Developer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        header .bio {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            color: var(--accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-links a {
+            display: inline-block;
+            color: var(--bg-color);
+            background-color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .project-links a:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .profile-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .profile-link a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .profile-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Cabecera / Presentación -->
+    <header>
+        <h1>Alirio Guzman</h1>
+        <p>Desarrollador Web & Software Engineer</p>
+        <p class="bio">Especializado en desarrollo full-stack, PHP, JavaScript/React, WordPress, MySQL, arquitectura de plugins y consumo de APIs RESTful.</p>
+    </header>
+
+    <!-- Habilidades -->
+    <section>
+        <h2>Tecnologías y Stack Técnico</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">WordPress & Plugins</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">APIs REST / cURL</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Postman</span>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section>
+        <h2>Proyectos & Experiencia Destacada</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Desarrollo de Plugins y Módulos Web a Medida</h3>
+                <p>Creación de soluciones personalizadas en PHP y JavaScript, gestión de bases de datos relacionales en MySQL y optimización de flujos de datos e integraciones complejas.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Integración de APIs y Arquitectura Frontend</h3>
+                <p>Implementación de servicios externos y consumo eficiente de endpoints mediante cURL y JavaScript (`fetch`/`axios`), asegurando un manejo defensivo de errores y cargas óptimas.</p>
+            </div>
+
+        </div>
+
+        <div class="profile-link">
+            <p>Explora más de mi actividad técnica en mi perfil principal: <a href="https://github.com/alirio1701" target="_blank">github.com/alirio1701</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Alirio Guzman. Portafolio profesional para GitHub Pages.</p>
+    </footer>
+</div>
+
+</body>
+</html>
