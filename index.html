@@ -37,6 +37,38 @@
       padding: 50px 20px 45px 20px;
       text-align: center;
       border-bottom: 4px solid var(--accent);
+      position: relative;
+    }
+
+    /* Selector de Idioma en la parte superior derecha */
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
     .header-container {
@@ -397,32 +429,37 @@
 <body>
 
   <header>
+    <!-- Selector de Idioma -->
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
+      <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+    </div>
+
     <div class="header-container">
-      <!-- Foto de Perfil -->
       <div class="profile-img-container">
         <img src="yo.jpeg" alt="Alirio Antonio Rivero Guzmán">
       </div>
       
       <div>
-        <span class="badge-title">🎓 Ingeniero en Informática</span>
+        <span class="badge-title" data-i18n="badgeTitle">🎓 Ingeniero en Informática</span>
         <h1>Alirio Antonio Rivero Guzmán</h1>
-        <p class="tagline">Senior Full Stack Developer & Core Architect (+10 Años de Experiencia)</p>
+        <p class="tagline" data-i18n="tagline">Senior Full Stack Developer & Core Architect (+10 Años de Experiencia)</p>
       </div>
       
       <div class="header-links">
         <a href="https://github.com/alirio1701" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-        <a href="mailto:aliriorivero17011991@gmail.com" class="cta">📩 Contactar / Email</a>
+        <a href="mailto:aliriorivero17011991@gmail.com" class="cta" data-i18n="contactCta">📩 Contactar / Email</a>
       </div>
     </div>
   </header>
 
   <main>
 
-    <!-- Métricas del CV Actualizado -->
+    <!-- Métricas del CV -->
     <div class="stats-banner">
       <div class="stat-card">
         <div class="stat-number">+10 Años</div>
-        <div class="stat-label">Experiencia Senior</div>
+        <div class="stat-label" data-i18n="statExp">Experiencia Senior</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">React & Node</div>
@@ -430,32 +467,32 @@
       </div>
       <div class="stat-card">
         <div class="stat-number">Elasticsearch</div>
-        <div class="stat-label">Optimización de Red</div>
+        <div class="stat-label" data-i18n="statNetwork">Optimización de Red</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">Top 3</div>
-        <div class="stat-label">Honorífica Universitaria</div>
+        <div class="stat-label" data-i18n="statHonors">Honorífica Universitaria</div>
       </div>
     </div>
 
     <!-- Resumen Profesional -->
     <section>
-      <h2>👨‍💻 Resumen Profesional</h2>
-      <p style="font-size: 1.02rem; color: #334155;">
-        Ingeniero en Informática y Desarrollador Full-Stack Senior con más de 10 años de experiencia construyendo aplicaciones web escalables con <strong>React.js, Node.js y TypeScript</strong>. 
+      <h2 data-i18n="secSummaryTitle">👨‍💻 Resumen Profesional</h2>
+      <p style="font-size: 1.02rem; color: #334155;" data-i18n="summaryP1">
+        Ingeniero en Informática y Desarrollador Full-Stack Senior con más de 10 años de experiencia construyendo aplicaciones web escalables con <strong>React.js, Node.js y TypeScript</strong>.
       </p>
-      <p style="margin-top: 10px; font-size: 1.02rem; color: #334155;">
+      <p style="margin-top: 10px; font-size: 1.02rem; color: #334155;" data-i18n="summaryP2">
         Especializado en diseño de APIs RESTful y GraphQL, optimización de arquitectura e integración de servicios de búsqueda veloz mediante <strong>Elasticsearch</strong> para reducir sensiblemente la latencia en red, y desarrollo asistido por herramientas de Inteligencia Artificial (Claude, ChatGPT, Gemini) para potenciar la productividad y la calidad del código.
       </p>
     </section>
 
-    <!-- Habilidades Técnicas al Inicio -->
+    <!-- Habilidades Técnicas -->
     <section>
-      <h2>🛠️ Habilidades Técnicas & Tecnologías Clave</h2>
+      <h2 data-i18n="secSkillsTitle">🛠️ Habilidades Técnicas & Tecnologías Clave</h2>
       <div class="skills-grid">
         
         <div class="skill-category">
-          <h3>Lenguajes & Frontend</h3>
+          <h3 data-i18n="catLang">Lenguajes & Frontend</h3>
           <div class="skill-tags">
             <span class="skill-tag">JavaScript (ES6+)</span>
             <span class="skill-tag">TypeScript</span>
@@ -470,7 +507,7 @@
         </div>
 
         <div class="skill-category">
-          <h3>Búsqueda, APIs & CMS</h3>
+          <h3 data-i18n="catSearch">Búsqueda, APIs & CMS</h3>
           <div class="skill-tags">
             <span class="skill-tag">Elasticsearch</span>
             <span class="skill-tag">APIs RESTful</span>
@@ -483,7 +520,7 @@
         </div>
 
         <div class="skill-category">
-          <h3>Bases de Datos & Cloud</h3>
+          <h3 data-i18n="catDb">Bases de Datos & Cloud</h3>
           <div class="skill-tags">
             <span class="skill-tag">SQL / MySQL</span>
             <span class="skill-tag">MongoDB</span>
@@ -495,13 +532,13 @@
         </div>
 
         <div class="skill-category">
-          <h3>Herramientas & IA</h3>
+          <h3 data-i18n="catAi">Herramientas & IA</h3>
           <div class="skill-tags">
             <span class="skill-tag">Claude / ChatGPT / Gemini</span>
-            <span class="skill-tag">Refactorización con IA</span>
+            <span class="skill-tag" data-i18n="tagAiRefactor">Refactorización con IA</span>
             <span class="skill-tag">Scrum / Kanban</span>
             <span class="skill-tag">Jira / Trello</span>
-            <span class="skill-tag">Mentoría de Equipos</span>
+            <span class="skill-tag" data-i18n="tagMentorship">Mentoría de Equipos</span>
           </div>
         </div>
 
@@ -510,18 +547,18 @@
 
     <!-- Trayectoria Profesional -->
     <section>
-      <h2>💼 Trayectoria Profesional Destacada</h2>
+      <h2 data-i18n="secExpTitle">💼 Trayectoria Profesional Destacada</h2>
       <div class="timeline">
 
         <!-- IDX Boost -->
         <div class="timeline-item">
           <div class="job-title">Full Stack Senior Developer</div>
           <div class="job-company">IDXBoost</div>
-          <div class="job-period">2022 – Actualidad</div>
+          <div class="job-period" data-i18n="idxPeriod">2022 – Actualidad</div>
           <ul class="job-details">
-            <li><strong>Optimización de Arquitectura & Elasticsearch:</strong> Integración estratégica de Elasticsearch entre capas REST/API y frontend en React, reduciendo significativamente los tiempos de respuesta e intercambios de datos en red.</li>
-            <li><strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS.</li>
-            <li><strong>Desarrollo Asistido por IA:</strong> Refactorización, generación y pruebas de código eficientes asistido por herramientas de IA (Claude, ChatGPT, Gemini).</li>
+            <li data-i18n="idxL1"><strong>Optimización de Arquitectura & Elasticsearch:</strong> Integración estratégica de Elasticsearch entre capas REST/API y frontend en React, reduciendo significativamente los tiempos de respuesta e intercambios de datos en red.</li>
+            <li data-i18n="idxL2"><strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS.</li>
+            <li data-i18n="idxL3"><strong>Desarrollo Asistido por IA:</strong> Refactorización, generación y pruebas de código eficientes asistido por herramientas de IA (Claude, ChatGPT, Gemini).</li>
           </ul>
         </div>
 
@@ -531,9 +568,9 @@
           <div class="job-company">Venteck</div>
           <div class="job-period">2018 – 2022</div>
           <ul class="job-details">
-            <li>Desarrollo de aplicaciones y soluciones personalizadas especializadas en distintos sistemas CMS.</li>
-            <li>Construcción y adaptación de plugins a la medida según requerimientos técnicos y funcionales del cliente.</li>
-            <li>Optimización de la experiencia de usuario e interfaz gráfica en aplicaciones desarrolladas en PHP.</li>
+            <li data-i18n="ventL1">Desarrollo de aplicaciones y soluciones personalizadas especializadas en distintos sistemas CMS.</li>
+            <li data-i18n="ventL2">Construcción y adaptación de plugins a la medida según requerimientos técnicos y funcionales del cliente.</li>
+            <li data-i18n="ventL3">Optimización de la experiencia de usuario e interfaz gráfica en aplicaciones desarrolladas en PHP.</li>
           </ul>
         </div>
 
@@ -543,9 +580,9 @@
           <div class="job-company">Nearsource</div>
           <div class="job-period">2016 – 2018</div>
           <ul class="job-details">
-            <li>Implementación de plataformas web utilizando CMS líderes como WordPress, Shopify y Magento.</li>
-            <li>Diseño y programación de plugins personalizados ajustados a las especificaciones de cada cliente.</li>
-            <li>Mejora de la experiencia de usuario y rendimiento en diversas aplicaciones basadas en PHP.</li>
+            <li data-i18n="nearL1">Implementación de plataformas web utilizando CMS líderes como WordPress, Shopify y Magento.</li>
+            <li data-i18n="nearL2">Diseño y programación de plugins personalizados ajustados a las especificaciones de cada cliente.</li>
+            <li data-i18n="nearL3">Mejora de la experiencia de usuario y rendimiento en diversas aplicaciones basadas en PHP.</li>
           </ul>
         </div>
 
@@ -555,19 +592,19 @@
           <div class="job-company">TecnoSoluciones</div>
           <div class="job-period">2015 – 2016</div>
           <ul class="job-details">
-            <li>Desarrollo de CMS, plataformas e-commerce, portales inmobiliarios y landing pages a medida.</li>
-            <li>Implementación de soluciones de correo y envíos masivos de boletines informativos.</li>
-            <li>Análisis, diseño y administración de bases de datos SQL y atención directa de solicitudes técnicas.</li>
+            <li data-i18n="tecL1">Desarrollo de CMS, plataformas e-commerce, portales inmobiliarios y landing pages a medida.</li>
+            <li data-i18n="tecL2">Implementación de soluciones de correo y envíos masivos de boletines informativos.</li>
+            <li data-i18n="tecL3">Análisis, diseño y administración de bases de datos SQL y atención directa de solicitudes técnicas.</li>
           </ul>
         </div>
 
         <!-- Freelance -->
         <div class="timeline-item">
-          <div class="job-title">Desarrollador WEB Freelance</div>
-          <div class="job-company">Proyectos Independientes</div>
+          <div class="job-title" data-i18n="freeTitle">Desarrollador WEB Freelance</div>
+          <div class="job-company" data-i18n="freeCompany">Proyectos Independientes</div>
           <div class="job-period">2014 – 2015</div>
           <ul class="job-details">
-            <li>Desarrollo de sitios web con HTML5, CSS3, Bootstrap, manejo de bases de datos SQL y mantenimiento de aplicaciones PHP.</li>
+            <li data-i18n="freeL1">Desarrollo de sitios web con HTML5, CSS3, Bootstrap, manejo de bases de datos SQL y mantenimiento de aplicaciones PHP.</li>
           </ul>
         </div>
 
@@ -576,28 +613,28 @@
 
     <!-- Infraestructura, Mantenimiento y Redes -->
     <section>
-      <h2>🌐 Infraestructura, Mantenimiento & Redes</h2>
+      <h2 data-i18n="secInfraTitle">🌐 Infraestructura, Mantenimiento & Redes</h2>
       <ul class="job-details" style="padding-left: 0;">
-        <li style="margin-bottom: 10px;"><strong>Soporte, Mantenimiento & Gestión:</strong> Mantenimiento de software en grandes plataformas heredadas, garantizando escalabilidad y seguridad en grandes volúmenes de datos.</li>
-        <li><strong>Redes & Protocolos:</strong> Diseño e implementación de redes LAN, cableado estructurado, configuración de firewalls, protocolos TCP/IP y políticas de seguridad.</li>
+        <li style="margin-bottom: 10px;" data-i18n="infraL1"><strong>Soporte, Mantenimiento & Gestión:</strong> Mantenimiento de software en grandes plataformas heredadas, garantizando escalabilidad y seguridad en grandes volúmenes de datos.</li>
+        <li data-i18n="infraL2"><strong>Redes & Protocolos:</strong> Diseño e implementación de redes LAN, cableado estructurado, configuración de firewalls, protocolos TCP/IP y políticas de seguridad.</li>
       </ul>
     </section>
 
     <!-- Proyectos Destacados con IDXBoost -->
     <section>
-      <h2>🚀 Proyectos & Arquitectura Inmobiliaria</h2>
+      <h2 data-i18n="secProjTitle">🚀 Proyectos & Arquitectura Inmobiliaria</h2>
       <div class="projects-grid">
         <article class="project-card">
           <div class="project-header">
             <span class="project-badge">Enterprise Platform</span>
             <h3>IDXBoost Real Estate Architecture & Elasticsearch Integration</h3>
           </div>
-          <p class="project-description">
+          <p class="project-description" data-i18n="projDesc">
             Plataforma inmobiliaria de alto rendimiento impulsada por el ecosistema IDXBoost. Integración optimizada con motores de búsqueda Elasticsearch y feeds MLS para consultas instantáneas.
           </p>
           <ul class="project-highlights">
-            <li>⚡ <strong>Rendimiento de Red:</strong> Indexación avanzada y consultas rápidas mediante Elasticsearch.</li>
-            <li>🛠️ <strong>Plugins Custom:</strong> Desarrollo experto de complementos orientados al sector inmobiliario.</li>
+            <li data-i18n="projH1">⚡ <strong>Rendimiento de Red:</strong> Indexación avanzada y consultas rápidas mediante Elasticsearch.</li>
+            <li data-i18n="projH2">🛠️ <strong>Plugins Custom:</strong> Desarrollo experto de complementos orientados al sector inmobiliario.</li>
           </ul>
           <div class="tech-stack-tags">
             <span class="tag">React.js</span>
@@ -612,25 +649,141 @@
 
     <!-- Educación y Reconocimientos -->
     <section>
-      <h2>🎓 Educación & Reconocimientos Académicos</h2>
+      <h2 data-i18n="secEduTitle">🎓 Educación & Reconocimientos Académicos</h2>
       
       <div class="edu-card">
-        <div class="edu-degree">🎓 Ingeniero en Informática</div>
+        <div class="edu-degree" data-i18n="edu1Degree">🎓 Ingeniero en Informática</div>
         <div class="edu-school">Universidad Politécnica Territorial de Aragua "Federico Figueroa"</div>
       </div>
 
       <div class="edu-card">
-        <div class="edu-degree">🏆 Técnico Superior Universitario en Informática (Dic 2014)</div>
+        <div class="edu-degree" data-i18n="edu2Degree">🏆 Técnico Superior Universitario en Informática (Dic 2014)</div>
         <div class="edu-school">Universidad Politécnica Territorial de Aragua "Federico Figueroa"</div>
-        <p style="font-size: 0.88rem; color: var(--accent); margin-top: 4px; font-weight: 600;">Mención Honorífica Universitaria (3er Lugar en la Promoción)</p>
+        <p style="font-size: 0.88rem; color: var(--accent); margin-top: 4px; font-weight: 600;" data-i18n="edu2Honors">Mención Honorífica Universitaria (3er Lugar en la Promoción)</p>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado con GitHub Pages.</p>
+    <p data-i18n="footerText">&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado con GitHub Pages.</p>
   </footer>
 
+  <!-- Script de Traducción i18n -->
+  <script>
+    const translations = {
+      es: {
+        badgeTitle: "🎓 Ingeniero en Informática",
+        tagline: "Senior Full Stack Developer & Core Architect (+10 Años de Experiencia)",
+        contactCta: "📩 Contactar / Email",
+        statExp: "Experiencia Senior",
+        statNetwork: "Optimización de Red",
+        statHonors: "Honorífica Universitaria",
+        secSummaryTitle: "👨‍💻 Resumen Profesional",
+        summaryP1: "Ingeniero en Informática y Desarrollador Full-Stack Senior con más de 10 años de experiencia construyendo aplicaciones web escalables con <strong>React.js, Node.js y TypeScript</strong>.",
+        summaryP2: "Especializado en diseño de APIs RESTful y GraphQL, optimización de arquitectura e integración de servicios de búsqueda veloz mediante <strong>Elasticsearch</strong> para reducir sensiblemente la latencia en red, y desarrollo asistido por herramientas de Inteligencia Artificial (Claude, ChatGPT, Gemini) para potenciar la productividad y la calidad del código.",
+        secSkillsTitle: "🛠️ Habilidades Técnicas & Tecnologías Clave",
+        catLang: "Lenguajes & Frontend",
+        catSearch: "Búsqueda, APIs & CMS",
+        catDb: "Bases de Datos & Cloud",
+        catAi: "Herramientas & IA",
+        tagAiRefactor: "Refactorización con IA",
+        tagMentorship: "Mentoría de Equipos",
+        secExpTitle: "💼 Trayectoria Profesional Destacada",
+        idxPeriod: "2022 – Actualidad",
+        idxL1: "<strong>Optimización de Arquitectura & Elasticsearch:</strong> Integración estratégica de Elasticsearch entre capas REST/API y frontend en React, reduciendo significativamente los tiempos de respuesta e intercambios de datos en red.",
+        idxL2: "<strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS.",
+        idxL3: "<strong>Desarrollo Asistido por IA:</strong> Refactorización, generación y pruebas de código eficientes asistido por herramientas de IA (Claude, ChatGPT, Gemini).",
+        ventL1: "Desarrollo de aplicaciones y soluciones personalizadas especializadas en distintos sistemas CMS.",
+        ventL2: "Construcción y adaptación de plugins a la medida según requerimientos técnicos y funcionales del cliente.",
+        ventL3: "Optimización de la experiencia de usuario e interfaz gráfica en aplicaciones desarrolladas en PHP.",
+        nearL1: "Implementación de plataformas web utilizando CMS líderes como WordPress, Shopify y Magento.",
+        nearL2: "Diseño y programación de plugins personalizados ajustados a las especificaciones de cada cliente.",
+        nearL3: "Mejora de la experiencia de usuario y rendimiento en diversas aplicaciones basadas en PHP.",
+        tecL1: "Desarrollo de CMS, plataformas e-commerce, portales inmobiliarios y landing pages a medida.",
+        tecL2: "Implementación de soluciones de correo y envíos masivos de boletines informativos.",
+        tecL3: "Análisis, diseño y administración de bases de datos SQL y atención directa de solicitudes técnicas.",
+        freeTitle: "Desarrollador WEB Freelance",
+        freeCompany: "Proyectos Independientes",
+        freeL1: "Desarrollo de sitios web con HTML5, CSS3, Bootstrap, manejo de bases de datos SQL y mantenimiento de aplicaciones PHP.",
+        secInfraTitle: "🌐 Infraestructura, Mantenimiento & Redes",
+        infraL1: "<strong>Soporte, Mantenimiento & Gestión:</strong> Mantenimiento de software en grandes plataformas heredadas, garantizando escalabilidad y seguridad en grandes volúmenes de datos.",
+        infraL2: "<strong>Redes & Protocolos:</strong> Diseño e implementación de redes LAN, cableado estructurado, configuración de firewalls, protocolos TCP/IP y políticas de seguridad.",
+        secProjTitle: "🚀 Proyectos & Arquitectura Inmobiliaria",
+        projDesc: "Plataforma inmobiliaria de alto rendimiento impulsada por el ecosistema IDXBoost. Integración optimizada con motores de búsqueda Elasticsearch y feeds MLS para consultas instantáneas.",
+        projH1: "⚡ <strong>Rendimiento de Red:</strong> Indexación avanzada y consultas rápidas mediante Elasticsearch.",
+        projH2: "🛠️ <strong>Plugins Custom:</strong> Desarrollo experto de complementos orientados al sector inmobiliario.",
+        secEduTitle: "🎓 Educación & Reconocimientos Académicos",
+        edu1Degree: "🎓 Ingeniero en Informática",
+        edu2Degree: "🏆 Técnico Superior Universitario en Informática (Dic 2014)",
+        edu2Honors: "Mención Honorífica Universitaria (3er Lugar en la Promoción)",
+        footerText: "&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado con GitHub Pages."
+      },
+      en: {
+        badgeTitle: "🎓 B.S. in Computer Engineering",
+        tagline: "Senior Full Stack Developer & Core Architect (10+ Years of Experience)",
+        contactCta: "📩 Get in Touch / Email",
+        statExp: "Senior Industry Exp.",
+        statNetwork: "Low-Latency Networks",
+        statHonors: "Academic Honors (Top 3)",
+        secSummaryTitle: "👨‍💻 Executive Summary",
+        summaryP1: "Senior Full-Stack Engineer with 10+ years of hands-on experience building high-throughput, scalable web systems powered by <strong>React.js, Node.js, and TypeScript</strong>.",
+        summaryP2: "Specialized in designing RESTful/GraphQL APIs, scaling core architectures, and integrating <strong>Elasticsearch</strong> engine clusters to slash network latency. Leverage cutting-edge AI workflows (Claude, ChatGPT, Gemini) to streamline code quality, refactoring, and delivery cycles.",
+        secSkillsTitle: "🛠️ Technical Skills & Core Tech Stack",
+        catLang: "Languages & Frontend",
+        catSearch: "Search Engines, APIs & CMS",
+        catDb: "Databases & Cloud Infrastructure",
+        catAi: "Developer Tooling & AI",
+        tagAiRefactor: "AI-Assisted Refactoring",
+        tagMentorship: "Technical Leadership & Mentorship",
+        secExpTitle: "💼 Professional Experience",
+        idxPeriod: "2022 – Present",
+        idxL1: "<strong>Architecture Optimization & Elasticsearch:</strong> Architected strategic Elasticsearch integrations between REST APIs and React frontends, dramatically slashing server response times and network data overhead.",
+        idxL2: "<strong>Real Estate Ecosystems & Custom Plugins:</strong> Engine-level development and fine-tuning of custom WordPress plugins geared toward enterprise MLS data streaming.",
+        idxL3: "<strong>AI-Powered Engineering Workflow:</strong> Accelerated code generation, unit testing, and refactoring by leveraging advanced AI tooling (Claude, ChatGPT, Gemini).",
+        ventL1: "Built custom web applications and bespoke software solutions tailored across enterprise CMS platforms.",
+        ventL2: "Engineered client-specific plugins and micro-modules adhering to rigorous functional requirements.",
+        ventL3: "Spearheaded UX enhancements and UI performance tuning for core PHP-backed web platforms.",
+        nearL1: "Deploys and managed enterprise-grade web solutions across market-leading CMS engines (WordPress, Shopify, Magento).",
+        nearL2: "Designed and programmed custom plugins fine-tuned to client operational workflows.",
+        nearL3: "Boosted front-end performance metrics and user retention across PHP applications.",
+        tecL1: "Engineered bespoke CMS solutions, e-commerce portals, real estate engines, and high-converting landing experiences.",
+        tecL2: "Built robust bulk email messaging pipelines and subscription workflows.",
+        tecL3: "Designed, normalized, and maintained relational SQL databases while providing tier-3 technical support.",
+        freeTitle: "Freelance Web Developer",
+        freeCompany: "Independent Consulting",
+        freeL1: "Delivered custom HTML5/CSS3/Bootstrap web builds, optimized SQL database schemes, and maintained legacy PHP apps.",
+        secInfraTitle: "🌐 Infrastructure, Networking & Maintenance",
+        infraL1: "<strong>Software Support & Data Governance:</strong> Refactored legacy enterprise systems, ensuring seamless data scalability, integrity, and fault tolerance under high traffic loads.",
+        infraL2: "<strong>Networking & Hardening:</strong> Designed LAN topologies, structured cabling, network firewalls, TCP/IP configurations, and strict security compliance policies.",
+        secProjTitle: "🚀 Featured Work & Real Estate Architecture",
+        projDesc: "High-throughput real estate platform powered by the IDXBoost engine. Integrated with Elasticsearch indexing for instant property searches across live MLS feeds.",
+        projH1: "⚡ <strong>Low Latency:</strong> Sub-second query times powered by strategic Elasticsearch indexing.",
+        projH2: "🛠️ <strong>Custom Plugins:</strong> Bespoke plugin architecture tailored for enterprise real estate data.",
+        secEduTitle: "🎓 Education & Academic Honors",
+        edu1Degree: "🎓 B.S. in Computer Engineering",
+        edu2Degree: "🏆 Associate Degree in Computer Science (Dec 2014)",
+        edu2Honors: "Graduated with Academic Honors (Ranked 3rd Overall in Class)",
+        footerText: "&copy; 2026 Alirio Antonio Rivero Guzmán. All rights reserved. Hosted on GitHub Pages."
+      }
+    };
+
+    function setLanguage(lang) {
+      // Toggle button active states
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+
+      // Update all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+  </script>
 </body>
 </html>
