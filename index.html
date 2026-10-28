@@ -176,7 +176,7 @@
       gap: 10px;
     }
 
-    /* Stats Banner con z-index añadido */
+    /* Stats Banner con z-index */
     .stats-banner {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -310,6 +310,50 @@
       left: 0;
       color: var(--primary-accent);
       font-weight: bold;
+    }
+
+    /* Botones de Sitios Destacados en Experiencia */
+    .featured-sites {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    .featured-sites-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .site-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: var(--primary-accent);
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .site-btn:hover {
+      background: var(--primary-accent);
+      color: white;
+      border-color: var(--primary-accent);
+      transform: translateY(-1px);
     }
 
     .edu-card {
@@ -476,6 +520,22 @@
           <li data-i18n="idxL2"><strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS.</li>
           <li data-i18n="idxL3"><strong>Desarrollo Asistido por IA:</strong> Refactorización, generación y pruebas de código eficientes asistido por herramientas de IA (Claude, ChatGPT, Gemini).</li>
         </ul>
+
+        <!-- Botones a Sitios de Producción -->
+        <div class="featured-sites">
+          <div class="featured-sites-title" data-i18n="featuredSitesTitle">🌐 Sitios de Clientes en Producción:</div>
+          <div class="site-links">
+            <a href="https://www.miamicondoinvestments.com/property-search/" target="_blank" rel="noopener noreferrer" class="site-btn">
+              Miami Condo Investments ↗
+            </a>
+            <a href="https://luxlifemiamiblog.com/search/" target="_blank" rel="noopener noreferrer" class="site-btn">
+              Siddons Group / LuxLife ↗
+            </a>
+            <a href="https://cervera.com/search/" target="_blank" rel="noopener noreferrer" class="site-btn">
+              Cervera ↗
+            </a>
+          </div>
+        </div>
       </div>
 
       <!-- Venteck -->
@@ -574,6 +634,7 @@
       idxL1: "<strong>Optimización de Arquitectura & Elasticsearch:</strong> Integración estratégica de Elasticsearch entre capas REST/API y frontend en React, reduciendo significativamente los tiempos de respuesta e intercambios de datos en red.",
       idxL2: "<strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS.",
       idxL3: "<strong>Desarrollo Asistido por IA:</strong> Refactorización, generación y pruebas de código eficientes asistido por herramientas de IA (Claude, ChatGPT, Gemini).",
+      featuredSitesTitle: "🌐 Sitios de Clientes en Producción:",
       ventL1: "Desarrollo de aplicaciones y soluciones personalizadas especializadas en distintos sistemas CMS.",
       ventL2: "Construcción y adaptación de plugins a la medida según requerimientos técnicos y funcionales del cliente.",
       ventL3: "Optimización de la experiencia de usuario e interfaz gráfica en aplicaciones desarrolladas en PHP.",
@@ -590,7 +651,7 @@
       edu1Degree: "Ingeniero en Informática",
       edu2Degree: "Técnico Superior Universitario en Informática (Dic 2014)",
       edu2Honors: "Mención Honorífica Universitaria (3er Lugar en la Promoción)",
-      footerText: "&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado com GitHub Pages."
+      footerText: "&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado con GitHub Pages."
     },
     en: {
       badgeTitle: "B.S. in Computer Engineering",
@@ -614,6 +675,7 @@
       idxL1: "<strong>Architecture Optimization & Elasticsearch:</strong> Architected strategic Elasticsearch integrations between REST APIs and React frontends, dramatically slashing server response times and network data overhead.",
       idxL2: "<strong>Real Estate Ecosystems & Custom Plugins:</strong> Engine-level development and fine-tuning of custom WordPress plugins geared toward enterprise MLS data streaming.",
       idxL3: "<strong>AI-Powered Engineering Workflow:</strong> Accelerated code generation, unit testing, and refactoring by leveraging advanced AI tooling (Claude, ChatGPT, Gemini).",
+      featuredSitesTitle: "🌐 Live Enterprise Client Sites:",
       ventL1: "Built custom web applications and bespoke software solutions tailored across enterprise CMS platforms.",
       ventL2: "Engineered client-specific plugins and micro-modules adhering to rigorous functional requirements.",
       ventL3: "Spearheaded UX enhancements and UI performance tuning for core PHP-backed web platforms.",
