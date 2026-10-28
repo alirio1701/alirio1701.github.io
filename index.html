@@ -1,322 +1,639 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alirio Guzman | Senior Software & Web Developer</title>
-    <style>
-        :root {
-            --primary: #2b6cb0;
-            --primary-dark: #1a365d;
-            --accent: #319795;
-            --bg-color: #f7fafc;
-            --card-bg: #ffffff;
-            --text-main: #2d3748;
-            --text-muted: #718096;
-            --border-color: #e2e8f0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ing. Alirio Antonio Rivero Guzmán | Senior Full Stack Developer</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --primary-accent: #2563eb;
+      --accent: #0d9488;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --highlight: #f0fdf4;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 0;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0;
+    }
 
-        header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 50px 20px 45px 20px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+    .header-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 20px auto;
-        }
+    .profile-img-container {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--accent);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-        .header-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
+    .profile-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .header-links a {
-            color: white;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
+    .badge-title {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.2);
+      border: 1px solid rgba(13, 148, 136, 0.5);
+      color: #5eead4;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
 
-        .header-links a:hover {
-            background: rgba(255, 255, 255, 0.25);
-        }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-top: 5px;
+    }
 
-        main {
-            max-width: 1000px;
-            margin: -30px auto 40px auto;
-            padding: 0 20px;
-        }
+    header p.tagline {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 750px;
+      font-weight: 300;
+    }
 
-        section {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border-color);
-        }
+    .header-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
 
-        section h2 {
-            font-size: 1.5rem;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--border-color);
-        }
+    .header-links a {
+      color: white;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
 
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+    .header-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
 
-        .skill-category h3 {
-            font-size: 1rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
+    .header-links a.cta {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
 
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+    .header-links a.cta:hover {
+      background: #0f766e;
+    }
 
-        .skill-tag {
-            background: #edf2f7;
-            color: #4a5568;
-            font-size: 0.85rem;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: 500;
-        }
+    main {
+      max-width: 1000px;
+      margin: -25px auto 50px auto;
+      padding: 0 20px;
+    }
 
-        /* Projects Container */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-        }
+    section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
 
-        .project-card {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 24px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+    section h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
-        }
+    /* Stats Banner */
+    .stats-banner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
 
-        .project-badge {
-            display: inline-block;
-            background-color: #ebf8ff;
-            color: var(--primary);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 4px 8px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent);
+      padding: 18px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
 
-        .project-card h3 {
-            font-size: 1.3rem;
-            color: var(--primary-dark);
-            margin-bottom: 12px;
-        }
+    .stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
 
-        .project-description {
-            color: #4a5568;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-        .project-highlights {
-            list-style: none;
-            padding: 0;
-            margin: 16px 0;
-            font-size: 0.9rem;
-            color: #4a5568;
-        }
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
 
-        .project-highlights li {
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
+    .skill-category {
+      background: #f8fafc;
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
 
-        .tech-stack-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-            margin-bottom: 20px;
-        }
+    .skill-category h3 {
+      font-size: 1rem;
+      color: var(--primary-accent);
+      margin-bottom: 10px;
+    }
 
-        .tag {
-            background: #f7fafc;
-            border: 1px solid var(--border-color);
-            color: #2d3748;
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
 
-        .project-links a {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
+    .skill-tag {
+      background: #ffffff;
+      color: var(--text-main);
+      border: 1px solid #cbd5e1;
+      font-size: 0.82rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
 
-        .project-links a:hover {
-            background-color: var(--primary-dark);
-        }
+    /* Experience Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-    </style>
+    .timeline-item {
+      border-left: 3px solid var(--primary-accent);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--primary-accent);
+    }
+
+    .job-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .job-company {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .job-period {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .job-details {
+      list-style: none;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .job-details li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .job-details li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--primary-accent);
+      font-weight: bold;
+    }
+
+    /* Projects Container */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .project-badge {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: var(--primary-accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.92rem;
+    }
+
+    .project-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .project-highlights li {
+      margin-bottom: 6px;
+    }
+
+    .tech-stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 14px 0;
+    }
+
+    .tag {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 15px;
+    }
+
+    .project-links a {
+      display: inline-block;
+      background-color: var(--primary-accent);
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .project-links a:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Education Box */
+    .edu-card {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .edu-degree {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .edu-school {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>Alirio Guzman</h1>
-    <p>Senior Software & Web Developer | Custom WordPress, PHP, JavaScript & API Integrations</p>
-    <div class="header-links">
+  <header>
+    <div class="header-container">
+      <!-- Foto de Perfil -->
+      <div class="profile-img-container">
+        <img src="yo.jpeg" alt="Alirio Antonio Rivero Guzmán">
+      </div>
+      
+      <div>
+        <span class="badge-title">🎓 Ingeniero en Informática</span>
+        <h1>Alirio Antonio Rivero Guzmán</h1>
+        <p class="tagline">Senior Full Stack Developer & Core Architect (+10 Años de Experiencia)[cite: 5]</p>
+      </div>
+      
+      <div class="header-links">
         <a href="https://github.com/alirio1701" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-        <a href="mailto:alirio1701@gmail.com">Contacto Directo</a>
+        <a href="mailto:aliriorivero17011991@gmail.com" class="cta">📩 Contactar / Email</a>
+      </div>
     </div>
-</header>
+  </header>
 
-<main>
-    <!-- Acerca de Mí -->
-    <section>
-        <h2>Perfil Profesional</h2>
-        <p>Desarrollador de software con amplia experiencia en la creación, optimización y mantenimiento de plataformas web de alto rendimiento. Especializado en arquitecturas personalizadas para WordPress, integración de APIs complejas (IDX Boost / MLS), seguridad orientada a estándares OWASP y optimización de bases de datos relacionales en entornos de producción.</p>
-    </section>
+  <main>
 
-    <!-- Stack Tecnológico -->
+    <!-- Métricas del CV Actualizado -->
+    <div class="stats-banner">
+      <div class="stat-card">
+        <div class="stat-number">+10 Años</div>
+        <div class="stat-label">Experiencia Senior[cite: 5]</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">React & Node</div>
+        <div class="stat-label">TypeScript & PHP[cite: 5]</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Elasticsearch</div>
+        <div class="stat-label">Optimización de Red[cite: 5]</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Top 3</div>
+        <div class="stat-label">Honorífica Universitaria[cite: 5]</div>
+      </div>
+    </div>
+
+    <!-- Habilidades Técnicas al Inicio -->
     <section>
-        <h2>Stack Tecnológico</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Backend & Core</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">PHP 8.x</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">WordPress Core</span>
-                    <span class="skill-tag">Plugin & Theme Dev</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frontend & UI</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">JavaScript (ES6+)</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">HTML5 / CSS3</span>
-                    <span class="skill-tag">AJAX / REST API</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Herramientas & Seguridad</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git / GitHub</span>
-                    <span class="skill-tag">Postman</span>
-                    <span class="skill-tag">cPanel / SFTP</span>
-                    <span class="skill-tag">OWASP Security</span>
-                </div>
-            </div>
+      <h2>🛠️ Habilidades Técnicas & Tecnologías Clave</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-category">
+          <h3>Lenguajes & Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Proyectos Destacados -->
-    <section>
-        <h2>Proyectos Destacados</h2>
-        <div class="projects-grid">
-
-            <!-- Proyecto 1: Enterprise Real Estate Engine & IDX Boost Architecture -->
-            <article class="project-card">
-                <div class="project-header">
-                    <span class="project-badge">Enterprise Project</span>
-                    <h3>Enterprise Real Estate Engine & IDX Boost Custom Architecture</h3>
-                </div>
-
-                <p class="project-description">
-                    Arquitectura personalizada de alto rendimiento sobre WordPress e integración profunda con la API de <strong>IDX Boost / MLS</strong>. Diseñada para procesar consultas complejas de propiedades en tiempo real, motor dinámico de vecindarios y landing pages SEO sin penalización en tiempos de respuesta.
-                </p>
-
-                <ul class="project-highlights">
-                    <li>⚡ <strong>Optimización:</strong> Reducción de tiempos de carga de 3.2s a 1.1s mediante cache transient y optimización de queries SQL.</li>
-                    <li>🛠️ <strong>Arquitectura Custom:</strong> Módulo de rutas y reescritura de URLs sin dependencia de plugins pesados.</li>
-                    <li>🛡️ <strong>Seguridad OWASP:</strong> Sanitización contextual, control CSRF con nonces y consultas preparadas ($wpdb->prepare).</li>
-                </ul>
-
-                <div class="tech-stack-tags">
-                    <span class="tag">PHP 8.2</span>
-                    <span class="tag">WordPress Plugin Dev</span>
-                    <span class="tag">JavaScript (ES6+)</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">IDX Boost REST API</span>
-                    <span class="tag">OWASP Security</span>
-                </div>
-
-                <div class="project-links">
-                    <a href="https://github.com/alirio1701/idx-boost-real-estate-engine" target="_blank" rel="noopener noreferrer">
-                        Ver Documentación & Código
-                    </a>
-                </div>
-            </article>
-
+        <div class="skill-category">
+          <h3>Búsqueda, APIs & CMS</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Elasticsearch</span>
+            <span class="skill-tag">APIs RESTful</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">WordPress & Plugins</span>
+            <span class="skill-tag">Magento</span>
+            <span class="skill-tag">Shopify</span>
+            <span class="skill-tag">Drupal</span>
+          </div>
         </div>
-    </section>
-</main>
 
-<footer>
-    <p>&copy; 2026 Alirio Guzman. Todos los derechos reservados. Desarrollado con GitHub Pages.</p>
-</footer>
+        <div class="skill-category">
+          <h3>Bases de Datos & Cloud</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SQL / MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Cassandra</span>
+            <span class="skill-tag">AWS / GCP</span>
+            <span class="skill-tag">Linux / Ubuntu</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Herramientas & IA</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Claude / ChatGPT / Gemini</span>
+            <span class="skill-tag">Refactorización con IA</span>
+            <span class="skill-tag">Scrum / Kanban</span>
+            <span class="skill-tag">Jira / Trello</span>
+            <span class="skill-tag">Mentoría de Equipos</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Resumen Profesional -->
+    <section>
+      <h2>👨‍💻 Resumen Profesional</h2>
+      <p style="font-size: 1.02rem; color: #334155;">
+        Ingeniero en Informática y Desarrollador Full-Stack Senior con más de 10 años de experiencia construyendo aplicaciones web escalables con <strong>React.js, Node.js y TypeScript</strong>[cite: 5]. 
+      </p>
+      <p style="margin-top: 10px; font-size: 1.02rem; color: #334155;">
+        Especializado en diseño de APIs RESTful y GraphQL, optimización de arquitectura e integración de servicios de búsqueda veloz mediante <strong>Elasticsearch</strong> para reducir sensiblemente la latencia en red, y desarrollo asistido por herramientas de Inteligencia Artificial (Claude, ChatGPT, Gemini) para potenciar la productividad y la calidad del código[cite: 5].
+      </p>
+    </section>
+
+    <!-- Trayectoria Profesional -->
+    <section>
+      <h2>💼 Trayectoria Profesional Destacada</h2>
+      <div class="timeline">
+
+        <!-- IDX Boost -->
+        <div class="timeline-item">
+          <div class="job-title">Full Stack Senior Developer</div>
+          <div class="job-company">IDXBoost</div>
+          <div class="job-period">2022 – Actualidad[cite: 5]</div>
+          <ul class="job-details">
+            <li><strong>Optimización de Arquitectura & Elasticsearch:</strong> Integración estratégica de Elasticsearch entre capas REST/API y frontend en React, reduciendo significativamente los tiempos de respuesta e intercambios de datos en red[cite: 5].</li>
+            <li><strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS[cite: 5].</li>
+            <li><strong>Desarrollo Asistido por IA:</strong> Refactorización, generación y pruebas de código eficientes asistido por herramientas de IA (Claude, ChatGPT, Gemini)[cite: 5].</li>
+          </ul>
+        </div>
+
+        <!-- Venteck -->
+        <div class="timeline-item">
+          <div class="job-title">Front-End Developer & CMS Specialist</div>
+          <div class="job-company">Venteck</div>
+          <div class="job-period">2018 – 2022[cite: 5]</div>
+          <ul class="job-details">
+            <li>Desarrollo de aplicaciones y soluciones personalizadas especializadas en distintos sistemas CMS[cite: 5].</li>
+            <li>Construcción y adaptación de plugins a la medida según requerimientos técnicos y funcionales del cliente[cite: 5].</li>
+            <li>Optimización de la experiencia de usuario e interfaz gráfica en aplicaciones desarrolladas en PHP[cite: 5].</li>
+          </ul>
+        </div>
+
+        <!-- Nearsource -->
+        <div class="timeline-item">
+          <div class="job-title">Front-End Engineer</div>
+          <div class="job-company">Nearsource</div>
+          <div class="job-period">2016 – 2018[cite: 5]</div>
+          <ul class="job-details">
+            <li>Implementación de plataformas web utilizando CMS líderes como WordPress, Shopify y Magento[cite: 5].</li>
+            <li>Diseño y programación de plugins personalizados ajustados a las especificaciones de cada cliente[cite: 5].</li>
+            <li>Mejora de la experiencia de usuario y rendimiento en diversas aplicaciones basadas en PHP[cite: 5].</li>
+          </ul>
+        </div>
+
+        <!-- TecnoSoluciones -->
+        <div class="timeline-item">
+          <div class="job-title">Desarrollador WEB</div>
+          <div class="job-company">TecnoSoluciones</div>
+          <div class="job-period">2015 – 2016[cite: 5]</div>
+          <ul class="job-details">
+            <li>Desarrollo de CMS, plataformas e-commerce, portales inmobiliarios y landing pages a medida[cite: 5].</li>
+            <li>Implementación de soluciones de correo y envíos masivos de boletines informativos[cite: 5].</li>
+            <li>Análisis, diseño y administración de bases de datos SQL y atención directa de solicitudes técnicas[cite: 5].</li>
+          </ul>
+        </div>
+
+        <!-- Freelance -->
+        <div class="timeline-item">
+          <div class="job-title">Desarrollador WEB Freelance</div>
+          <div class="job-company">Proyectos Independientes</div>
+          <div class="job-period">2014 – 2015[cite: 5]</div>
+          <ul class="job-details">
+            <li>Desarrollo de sitios web con HTML5, CSS3, Bootstrap, manejo de bases de datos SQL y mantenimiento de aplicaciones PHP[cite: 5].</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Infraestructura, Mantenimiento y Redes -->
+    <section>
+      <h2>🌐 Infraestructura, Mantenimiento & Redes</h2>
+      <ul class="job-details" style="padding-left: 0;">
+        <li style="margin-bottom: 10px;"><strong>Soporte, Mantenimiento & Gestión:</strong> Mantenimiento de software en grandes plataformas heredadas, garantizando escalabilidad y seguridad en grandes volúmenes de datos[cite: 5].</li>
+        <li><strong>Redes & Protocolos:</strong> Diseño e implementación de redes LAN, cableado estructurado, configuración de firewalls, protocolos TCP/IP y políticas de seguridad[cite: 5].</li>
+      </ul>
+    </section>
+
+    <!-- Proyectos Destacados con IDXBoost -->
+    <section>
+      <h2>🚀 Proyectos & Arquitectura Inmobiliaria</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-badge">Enterprise Platform</span>
+            <h3>IDXBoost Real Estate Architecture & Elasticsearch Integration</h3>
+          </div>
+          <p class="project-description">
+            Plataforma inmobiliaria de alto rendimiento impulsada por el ecosistema IDXBoost[cite: 5]. Integración optimizada con motores de búsqueda Elasticsearch y feeds MLS para consultas instantáneas[cite: 5].
+          </p>
+          <ul class="project-highlights">
+            <li>⚡ <strong>Rendimiento de Red:</strong> Indexación avanzada y consultas rápidas mediante Elasticsearch[cite: 5].</li>
+            <li>🛠️ <strong>Plugins Custom:</strong> Desarrollo experto de complementos orientados al sector inmobiliario[cite: 5].</li>
+          </ul>
+          <div class="tech-stack-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Elasticsearch</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">PHP</span>
+          </div>
+          <div class="project-links" style="margin-top: 15px;">
+            <a href="https://github.com/alirio1701" target="_blank" rel="noopener noreferrer">Ver Repositorios en GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Educación y Reconocimientos -->
+    <section>
+      <h2>🎓 Educación & Reconocimientos Académicos</h2>
+      
+      <div class="edu-card">
+        <div class="edu-degree">🎓 Ingeniero en Informática[cite: 5]</div>
+        <div class="edu-school">Universidad Politécnica Territorial de Aragua "Federico Figueroa"[cite: 5]</div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-degree">🏆 Técnico Superior Universitario en Informática (Dic 2014)[cite: 5]</div>
+        <div class="edu-school">Universidad Politécnica Territorial de Aragua "Federico Figueroa"[cite: 5]</div>
+        <p style="font-size: 0.88rem; color: var(--accent); margin-top: 4px; font-weight: 600;">Mención Honorífica Universitaria (3er Lugar en la Promoción)[cite: 5]</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado con GitHub Pages.</p>
+  </footer>
 
 </body>
 </html>
