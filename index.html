@@ -132,26 +132,20 @@
       color: white;
       text-decoration: none;
       background: rgba(255, 255, 255, 0.1);
-      padding: 8px 18px;
+      padding: 9px 18px;
       border-radius: 8px;
       font-size: 0.9rem;
       font-weight: 600;
       transition: all 0.2s ease;
       border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .header-links a:hover {
       background: rgba(255, 255, 255, 0.2);
       transform: translateY(-2px);
-    }
-
-    .header-links a.cta {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .header-links a.cta:hover {
-      background: #0f766e;
     }
 
     /* Margen negativo para sobreponer las tarjetas en el header */
@@ -361,13 +355,16 @@
     </div>
 
     <div>
-      <span class="badge-title" data-i18n="badgeTitle">🎓 Ingeniero en Informática</span>
+      <span class="badge-title" data-i18n="badgeTitle">Ingeniero en Informática</span>
       <h1>Alirio Antonio Rivero Guzmán</h1>
       <p class="tagline" data-i18n="tagline">Senior Full Stack Developer & Core Architect (+10 Años de Experiencia)</p>
     </div>
 
+    <!-- Botones con icono de teléfono y correo -->
     <div class="header-links">
-      <a href="mailto:aliriorivero17011991@gmail.com" class="cta" data-i18n="contactCta">📩 Contactar / Email</a>
+      <a href="mailto:aliriorivero17011991@gmail.com">✉️ aliriorivero17011991@gmail.com</a>
+      <a href="https://wa.me/584263116220" target="_blank" rel="noopener noreferrer">📞 +58-426.3116220</a>
+      <a href="#" style="cursor: default;">📋 <span data-i18n="passportText">Pasaporte Activo</span></a>
     </div>
   </div>
 </header>
@@ -396,7 +393,7 @@
 
   <!-- Resumen Profesional -->
   <section>
-    <h2 data-i18n="secSummaryTitle">👨‍💻 Resumen Profesional</h2>
+    <h2 data-i18n="secSummaryTitle">Resumen Profesional</h2>
     <p style="font-size: 1.02rem; color: #334155;" data-i18n="summaryP1">
       Ingeniero en Informática y Desarrollador Full-Stack Senior con más de 10 años de experiencia técnica destacada en el desarrollo de aplicaciones web con <strong>PHP</strong>, combinando la construcción de soluciones modernas e interactivas utilizando <strong>React.js, Node.js y TypeScript</strong>.
     </p>
@@ -407,7 +404,7 @@
 
   <!-- Habilidades Técnicas -->
   <section>
-    <h2 data-i18n="secSkillsTitle">🛠️ Habilidades Técnicas & Tecnologías Clave</h2>
+    <h2 data-i18n="secSkillsTitle">Habilidades Técnicas & Tecnologías Clave</h2>
     <div class="skills-grid">
 
       <div class="skill-category">
@@ -466,7 +463,7 @@
 
   <!-- Trayectoria Profesional -->
   <section>
-    <h2 data-i18n="secExpTitle">💼 Trayectoria Profesional Destacada</h2>
+    <h2 data-i18n="secExpTitle">Trayectoria Profesional Destacada</h2>
     <div class="timeline">
 
       <!-- IDX Boost -->
@@ -532,15 +529,15 @@
 
   <!-- Educación y Reconocimientos -->
   <section>
-    <h2 data-i18n="secEduTitle">🎓 Educación & Reconocimientos Académicos</h2>
+    <h2 data-i18n="secEduTitle">Educación & Reconocimientos Académicos</h2>
 
     <div class="edu-card">
-      <div class="edu-degree" data-i18n="edu1Degree">🎓 Ingeniero en Informática</div>
+      <div class="edu-degree" data-i18n="edu1Degree">Ingeniero en Informática</div>
       <div class="edu-school">Universidad Politécnica Territorial de Aragua "Federico Figueroa"</div>
     </div>
 
     <div class="edu-card">
-      <div class="edu-degree" data-i18n="edu2Degree">🏆 Técnico Superior Universitario en Informática (Dic 2014)</div>
+      <div class="edu-degree" data-i18n="edu2Degree">Técnico Superior Universitario en Informática (Dic 2014)</div>
       <div class="edu-school">Universidad Politécnica Territorial de Aragua "Federico Figueroa"</div>
       <p style="font-size: 0.88rem; color: var(--accent); margin-top: 4px; font-weight: 600;" data-i18n="edu2Honors">Mención Honorífica Universitaria (3er Lugar en la Promoción)</p>
     </div>
@@ -556,23 +553,23 @@
 <script>
   const translations = {
     es: {
-      badgeTitle: "🎓 Ingeniero en Informática",
+      badgeTitle: "Ingeniero en Informática",
       tagline: "Senior Full Stack Developer & Core Architect (+10 Años de Experiencia)",
-      contactCta: "📩 Contactar / Email",
+      passportText: "Pasaporte Activo",
       statExp: "Exp. Profesional",
       statHonors: "Honorífica Univ.",
       statArch: "Software Escalable",
-      secSummaryTitle: "👨‍💻 Resumen Profesional",
+      secSummaryTitle: "Resumen Profesional",
       summaryP1: "Ingeniero en Informática y Desarrollador Full-Stack Senior con más de 10 años de experiencia técnica destacada en el desarrollo de aplicaciones web con <strong>PHP</strong>, combinando la construcción de soluciones modernas e interactivas utilizando <strong>React.js, Node.js y TypeScript</strong>.",
       summaryP2: "Especializado en diseño de APIs RESTful y GraphQL, optimización de arquitectura e integración de servicios de búsqueda veloz mediante <strong>Elasticsearch</strong> para reducir sensiblemente la latencia en red, y desarrollo asistido por herramientas de Inteligencia Artificial (Claude, ChatGPT, Gemini) para potenciar la productividad y la calidad del código.",
-      secSkillsTitle: "🛠️ Habilidades Técnicas & Tecnologías Clave",
+      secSkillsTitle: "Habilidades Técnicas & Tecnologías Clave",
       catLang: "Lenguajes & Frontend",
       catSearch: "Búsqueda, APIs & CMS",
       catDb: "Bases de Datos & Cloud",
       catAi: "Herramientas & IA",
       tagAiRefactor: "Refactorización con IA",
       tagMentorship: "Mentoría de Equipos",
-      secExpTitle: "💼 Trayectoria Profesional Destacada",
+      secExpTitle: "Trayectoria Profesional Destacada",
       idxPeriod: "2022 – Actualidad",
       idxL1: "<strong>Optimización de Arquitectura & Elasticsearch:</strong> Integración estratégica de Elasticsearch entre capas REST/API y frontend en React, reduciendo significativamente los tiempos de respuesta e intercambios de datos en red.",
       idxL2: "<strong>Ecosistema Real Estate & Plugins:</strong> Especializado en creación y personalización de plugins WordPress enfocados en real estate e integración MLS.",
@@ -589,30 +586,30 @@
       freeTitle: "Desarrollador WEB Freelance",
       freeCompany: "Proyectos Independientes",
       freeL1: "Desarrollo de sitios web con HTML5, CSS3, Bootstrap, manejo de bases de datos SQL y mantenimiento de aplicaciones PHP.",
-      secEduTitle: "🎓 Educación & Reconocimientos Académicos",
-      edu1Degree: "🎓 Ingeniero en Informática",
-      edu2Degree: "🏆 Técnico Superior Universitario en Informática (Dic 2014)",
+      secEduTitle: "Educación & Reconocimientos Académicos",
+      edu1Degree: "Ingeniero en Informática",
+      edu2Degree: "Técnico Superior Universitario en Informática (Dic 2014)",
       edu2Honors: "Mención Honorífica Universitaria (3er Lugar en la Promoción)",
-      footerText: "&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado con GitHub Pages."
+      footerText: "&copy; 2026 Ing. Alirio Antonio Rivero Guzmán. Todos los derechos reservados. Desarrollado com GitHub Pages."
     },
     en: {
-      badgeTitle: "🎓 B.S. in Computer Engineering",
+      badgeTitle: "B.S. in Computer Engineering",
       tagline: "Senior Full Stack Developer & Core Architect (10+ Years of Experience)",
-      contactCta: "📩 Get in Touch / Email",
+      passportText: "Active Passport",
       statExp: "Professional Exp.",
       statHonors: "Academic Honors",
       statArch: "Scalable Software",
-      secSummaryTitle: "👨‍💻 Executive Summary",
+      secSummaryTitle: "Executive Summary",
       summaryP1: "Senior Full-Stack Engineer with 10+ years of proven software development experience centered on robust <strong>PHP</strong> engineering, alongside rich hands-on application development using modern frameworks like <strong>React.js, Node.js, and TypeScript</strong>.",
       summaryP2: "Specialized in designing RESTful/GraphQL APIs, scaling core architectures, and integrating <strong>Elasticsearch</strong> engine clusters to slash network latency. Leverage cutting-edge AI workflows (Claude, ChatGPT, Gemini) to streamline code quality, refactoring, and delivery cycles.",
-      secSkillsTitle: "🛠️ Technical Skills & Core Tech Stack",
+      secSkillsTitle: "Technical Skills & Core Tech Stack",
       catLang: "Languages & Frontend",
       catSearch: "Search Engines, APIs & CMS",
       catDb: "Databases & Cloud Infrastructure",
       catAi: "Developer Tooling & AI",
       tagAiRefactor: "AI-Assisted Refactoring",
       tagMentorship: "Technical Leadership & Mentorship",
-      secExpTitle: "💼 Professional Experience",
+      secExpTitle: "Professional Experience",
       idxPeriod: "2022 – Present",
       idxL1: "<strong>Architecture Optimization & Elasticsearch:</strong> Architected strategic Elasticsearch integrations between REST APIs and React frontends, dramatically slashing server response times and network data overhead.",
       idxL2: "<strong>Real Estate Ecosystems & Custom Plugins:</strong> Engine-level development and fine-tuning of custom WordPress plugins geared toward enterprise MLS data streaming.",
@@ -629,9 +626,9 @@
       freeTitle: "Freelance Web Developer",
       freeCompany: "Independent Consulting",
       freeL1: "Delivered custom HTML5/CSS3/Bootstrap web builds, optimized SQL database schemes, and maintained legacy PHP apps.",
-      secEduTitle: "🎓 Education & Academic Honors",
-      edu1Degree: "🎓 B.S. in Computer Engineering",
-      edu2Degree: "🏆 Associate Degree in Computer Science (Dec 2014)",
+      secEduTitle: "Education & Academic Honors",
+      edu1Degree: "B.S. in Computer Engineering",
+      edu2Degree: "Associate Degree in Computer Science (Dec 2014)",
       edu2Honors: "Graduated with Academic Honors (Ranked 3rd Overall in Class)",
       footerText: "&copy; 2026 Alirio Antonio Rivero Guzmán. All rights reserved. Hosted on GitHub Pages."
     }
